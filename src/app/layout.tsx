@@ -32,16 +32,16 @@ export default function RootLayout({
                 <Image 
                   src={logo.imageUrl} 
                   alt="MONEYBIC Logo" 
-                  width={180} 
-                  height={50} 
+                  width={130} 
+                  height={36} 
                   className="object-contain"
                   priority
                 />
               )}
             </Link>
             <nav className="hidden md:flex items-center gap-8">
-              <Link href="/" className="badge-text hover:text-primary transition-colors">Política de Privacidad</Link>
-              <Link href="/service-agreement" className="badge-text hover:text-primary transition-colors">Acuerdo de Servicio</Link>
+              <Link href="/politica-de-privacidad" className="badge-text hover:text-primary transition-colors">Política de Privacidad</Link>
+              <Link href="/acuerdo-de-servicio-al-usuario" className="badge-text hover:text-primary transition-colors">Acuerdo de Servicio</Link>
             </nav>
           </div>
         </header>

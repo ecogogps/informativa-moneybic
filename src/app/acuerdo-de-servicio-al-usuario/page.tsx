@@ -13,7 +13,7 @@ export default function ServiceAgreementPage() {
             Versión 1.0
           </Badge>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Acuerdo de Servicio al Usuario</h1>
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Acuerdo de Servicio al Usuario — MONEYBIC</h1>
         <p className="text-muted-foreground">Última actualización: Marzo 2026</p>
       </div>
 
@@ -118,7 +118,11 @@ export default function ServiceAgreementPage() {
             </div>
             <div className="space-y-2">
               <h4 className="font-bold text-foreground">5.3 Intereses y Cargos</h4>
-              <p>La Empresa aplicará una tasa de interés. En caso de mora (pago posterior a la fecha de vencimiento), se generarán intereses moratorios adicionales calculados por día de retraso. El monto exacto a pagar (incluyendo intereses y mora, si aplica) puede consultarse en todo momento en la sección "Préstamos" de la aplicación, mediante el detalle financiero calculado en tiempo real.</p>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>La Empresa aplicará una tasa de interés</li>
+                <li>En caso de mora (pago posterior a la fecha de vencimiento), se generarán intereses moratorios adicionales calculados por día de retraso</li>
+                <li>El monto exacto a pagar (incluyendo intereses y mora, si aplica) puede consultarse en todo momento en la sección "Préstamos" de la aplicación, mediante el detalle financiero calculado en tiempo real</li>
+              </ul>
             </div>
             <div className="space-y-2">
               <h4 className="font-bold text-foreground">5.4 Condonación de Intereses Moratorios</h4>
@@ -160,7 +164,8 @@ export default function ServiceAgreementPage() {
           <CardHeader>
             <CardTitle className="text-xl text-primary font-bold">8. Obligaciones del Usuario</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-2">
+          <CardContent className="space-y-4">
+            <p>Usted se compromete a:</p>
             <ul className="list-disc pl-6 space-y-2 marker:text-primary">
               <li>Proporcionar únicamente información verdadera y actualizada</li>
               <li>No compartir su número de teléfono o código OTP con terceros</li>
@@ -177,9 +182,10 @@ export default function ServiceAgreementPage() {
           <CardHeader>
             <CardTitle className="text-xl text-primary font-bold">9. Obligaciones de MONEYBIC</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-2">
+          <CardContent className="space-y-4">
+            <p>La Empresa se compromete a:</p>
             <ul className="list-disc pl-6 space-y-2 marker:text-primary">
-              <li>Informar claramente el monto, plazo y cargos antes del desembolso</li>
+              <li>Informarle claramente el monto, plazo y cargos antes del desembolso</li>
               <li>Procesar las solicitudes dentro de los tiempos de respuesta indicados</li>
               <li>Calcular y mostrar en tiempo real el monto adeudado, incluyendo intereses y mora</li>
               <li>Mantener la confidencialidad de su información conforme a la Política de Privacidad</li>
@@ -219,7 +225,8 @@ export default function ServiceAgreementPage() {
             <CardTitle className="text-xl text-primary font-bold">12. Cancelación de Cuenta</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p>La cancelación de cuenta no extingue las obligaciones de pago pendientes. El Usuario puede solicitar la eliminación voluntaria de su cuenta desde la sección Perfil de la aplicación, siempre que no tenga préstamos activos o saldos pendientes.</p>
+            <p>La cancelación de cuenta no extingue las obligaciones de pago pendientes.</p>
+            <p>El Usuario puede solicitar la eliminación voluntaria de su cuenta desde la sección Perfil de la aplicación, siempre que no tenga préstamos activos o saldos pendientes.</p>
           </CardContent>
         </Card>
 
@@ -228,7 +235,12 @@ export default function ServiceAgreementPage() {
             <CardTitle className="text-xl text-primary font-bold">13. Notificaciones</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p>Al registrarse en MONEYBIC y conceder el permiso correspondiente en su dispositivo Android, usted acepta recibir notificaciones push relacionadas con el estado de su solicitud y de su préstamo activo. Puede deshabilitarlas desde la configuración de su dispositivo, aunque esto podría afectar su experiencia.</p>
+            <p>Al registrarse en MONEYBIC y conceder el permiso correspondiente en su dispositivo Android, usted acepta recibir notificaciones push relacionadas con:</p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Estado de su solicitud de préstamo</li>
+              <li>Estado de su préstamo activo</li>
+            </ul>
+            <p>Puede deshabilitar las notificaciones desde la configuración de su dispositivo, aunque esto podría afectar su experiencia con el servicio.</p>
           </CardContent>
         </Card>
 
@@ -255,7 +267,7 @@ export default function ServiceAgreementPage() {
             <CardTitle className="text-xl text-primary font-bold">16. Legislación Aplicable y Jurisdicción</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p>El presente Acuerdo se rige por las leyes de los Estados Unidos Mexicanos. Para cualquier controversia, las partes se someten a la jurisdicción de los tribunales competentes de la Ciudad de México, renunciando a cualquier otro fuero.</p>
+            <p>El presente Acuerdo se rige por las leyes de los Estados Unidos Mexicanos. Para cualquier controversia derivada de su interpretación o cumplimiento, las partes se someten a la jurisdicción de los tribunales competentes de la Ciudad de México, renunciando a cualquier otro fuero que pudiera corresponderles por razón de su domicilio presente o futuro.</p>
           </CardContent>
         </Card>
 
@@ -264,9 +276,9 @@ export default function ServiceAgreementPage() {
             <CardTitle className="text-xl text-primary font-bold">17. Contacto</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
+            <p>Para cualquier duda, aclaración o reclamación relacionada con este Acuerdo:</p>
             <div className="bg-primary/10 p-6 rounded-lg border border-primary/20 space-y-2">
-              <p><strong>Para cualquier duda, aclaración o reclamación relacionada con este Acuerdo:</strong></p>
-              <p>Email: <a href="mailto:contacto@moneybic.com" className="text-primary hover:underline">contacto@moneybic.com</a></p>
+              <p>Correo: <a href="mailto:contacto@moneybic.com" className="text-primary hover:underline">contacto@moneybic.com</a></p>
               <p>Teléfono: 098 999 9999</p>
               <p>Horario: Lunes a Domingo, 09:00 – 17:00 hrs</p>
             </div>

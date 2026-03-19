@@ -209,9 +209,12 @@ export default function PrivacyPolicyPage() {
           <CardHeader>
             <CardTitle className="text-xl text-primary font-bold">7. Conservación de Datos</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="space-y-4">
             <p>
-              Sus datos personales serán conservados durante el tiempo que mantenga una relación activa con MONEYBIC y hasta por 5 años adicionales tras la conclusión del último préstamo, en cumplimiento de obligaciones fiscales, contables y de prevención de lavado de dinero conforme a la legislación mexicana aplicable. Los datos asociados a cuentas eliminadas serán suprimidos conforme a lo descrito en la sección 9 de este documento.
+              Sus datos personales serán conservados durante el tiempo que mantenga una relación activa con MONEYBIC y hasta por 5 años adicionales tras la conclusión del último préstamo, en cumplimiento de obligaciones fiscales, contables y de prevención de lavado de dinero conforme a la legislación mexicana aplicable.
+            </p>
+            <p>
+              Los datos asociados a cuentas eliminadas serán suprimidos conforme a lo descrito en la sección 9 de este documento.
             </p>
           </CardContent>
         </Card>

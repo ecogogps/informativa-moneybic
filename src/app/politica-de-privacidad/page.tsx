@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -53,12 +52,6 @@ export default function PrivacyPolicyPage() {
           </p>
         </CardContent>
       </Card>
-
-      <div className="flex justify-center pt-8">
-        <button className="pill-button bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-lg">
-          Entendido
-        </button>
-      </div>
     </div>
   );
 }

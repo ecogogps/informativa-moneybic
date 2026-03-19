@@ -1,3 +1,10 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "moneybic-logo",
+      "description": "MONEYBIC official logo",
+      "imageUrl": "https://i.postimg.cc/Jzd6XVzQ/MONEYBIC-LOGO.png",
+      "imageHint": "moneybic logo"
+    }
+  ]
 }

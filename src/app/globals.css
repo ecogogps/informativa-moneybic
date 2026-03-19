@@ -1,55 +1,30 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 8% 20%;
-    --card: 0 0% 100%;
-    --card-foreground: 210 8% 20%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 8% 20%;
-    --primary: 210 8% 20%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 210 5% 96%;
-    --secondary-foreground: 210 8% 20%;
-    --muted: 210 5% 96%;
-    --muted-foreground: 210 5% 45%;
-    --accent: 180 60% 50%;
+    --background: 210 10% 14%;
+    --foreground: 0 0% 100%;
+    --card: 210 8% 18%;
+    --card-foreground: 0 0% 100%;
+    --popover: 210 10% 14%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 103 33% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 8% 22%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 100% / 0.1;
+    --muted-foreground: 0 0% 100% / 0.6;
+    --accent: 103 33% 51%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 8% 90%;
-    --input: 210 8% 90%;
-    --ring: 180 60% 50%;
-    --chart-1: 180 60% 50%;
-    --chart-2: 210 8% 20%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-  }
-  .dark {
-    --background: 210 8% 10%;
-    --foreground: 0 0% 98%;
-    --card: 210 8% 10%;
-    --card-foreground: 0 0% 98%;
-    --popover: 210 8% 10%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 210 8% 20%;
-    --secondary: 210 8% 20%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 210 8% 20%;
-    --muted-foreground: 210 5% 65%;
-    --accent: 180 60% 50%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 210 8% 20%;
-    --input: 210 8% 20%;
-    --ring: 180 60% 50%;
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 100% / 0.1;
+    --ring: 103 33% 51%;
+    --radius: 1.25rem;
   }
 }
 
@@ -60,4 +35,18 @@
   body {
     @apply bg-background text-foreground font-body antialiased;
   }
+}
+
+.glass-card {
+  @apply bg-card/50 backdrop-blur-md border border-white/5;
+  box-shadow: 0 8px 32px 0 rgba(113, 175, 87, 0.1);
+}
+
+.pill-button {
+  @apply rounded-full font-semibold uppercase tracking-wider transition-all hover:scale-105 active:scale-95;
+  box-shadow: 0 4px 14px 0 rgba(113, 175, 87, 0.3);
+}
+
+.badge-text {
+  @apply text-xs font-bold uppercase tracking-[0.1em];
 }

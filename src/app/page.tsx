@@ -1,4 +1,7 @@
 
+"use client";
+
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -6,6 +9,16 @@ import { Badge } from "@/components/ui/badge";
 import { Smartphone, Wallet, CreditCard, UserPlus, CheckCircle, Clock, ShieldCheck, Zap } from "lucide-react";
 
 export default function HomePage() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div className="min-h-screen bg-background" />;
+  }
+
   return (
     <div className="space-y-24 pb-20 animate-in fade-in duration-1000">
       {/* SECCIÓN HERO */}

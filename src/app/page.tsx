@@ -22,9 +22,9 @@ export default function HomePage() {
             con aprobación en minutos y depósito directo a tu cuenta. Sin filas, sin papeleo, desde tu celular.
           </p>
         </div>
-        <Button className="pill-button bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-7 text-lg h-auto group">
+        <Button className="pill-button bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-base h-auto group">
           Solicita tu préstamo ahora
-          <Zap className="ml-2 h-5 w-5 fill-current" />
+          <Zap className="ml-2 h-4 w-4 fill-current" />
         </Button>
       </section>
 

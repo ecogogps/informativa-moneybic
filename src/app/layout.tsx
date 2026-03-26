@@ -36,9 +36,7 @@ export default function RootLayout({
               />
             </Link>
             <nav className="hidden md:flex items-center gap-8">
-              <Link href="/politica-de-privacidad" className="badge-text hover:text-primary transition-colors">Privacidad</Link>
-              <Link href="/acuerdo-de-servicio-al-usuario" className="badge-text hover:text-primary transition-colors">Acuerdo</Link>
-              <Link href="/terminos-y-condiciones" className="badge-text hover:text-primary transition-colors">Términos</Link>
+              <Link href="/" className="badge-text hover:text-primary transition-colors">Inicio</Link>
             </nav>
           </div>
         </header>
@@ -58,6 +56,13 @@ export default function RootLayout({
                 className="opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
               />
             </div>
+            
+            <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8">
+              <Link href="/politica-de-privacidad" className="badge-text text-[10px] hover:text-primary transition-colors">Política de Privacidad</Link>
+              <Link href="/acuerdo-de-servicio-al-usuario" className="badge-text text-[10px] hover:text-primary transition-colors">Acuerdo de Servicio</Link>
+              <Link href="/terminos-y-condiciones" className="badge-text text-[10px] hover:text-primary transition-colors">Términos y Condiciones</Link>
+            </nav>
+
             <p className="text-muted-foreground text-sm">
               &copy; 2026 MONEYBIC. Todos los derechos reservados.
             </p>

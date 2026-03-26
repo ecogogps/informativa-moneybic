@@ -1,12 +1,10 @@
-
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import './globals.css';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
-  title: 'MONEYBIC LEGAL',
+  title: 'MONEYBIC',
   description: 'Finanzas inteligentes con MONEYBIC.',
 };
 
@@ -15,7 +13,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const logo = PlaceHolderImages.find(img => img.id === 'moneybic-logo');
+  const logoUrl = "https://i.postimg.cc/Jzd6XVzQ/MONEYBIC-LOGO.png";
 
   return (
     <html lang="es" className="dark">
@@ -28,20 +26,19 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/80 backdrop-blur-md">
           <div className="container mx-auto flex h-20 items-center justify-between px-6">
             <Link href="/" className="flex items-center gap-2">
-              {logo && (
-                <Image 
-                  src={logo.imageUrl} 
-                  alt="MONEYBIC Logo" 
-                  width={130} 
-                  height={36} 
-                  className="object-contain"
-                  priority
-                />
-              )}
+              <Image 
+                src={logoUrl} 
+                alt="MONEYBIC Logo" 
+                width={130} 
+                height={36} 
+                className="object-contain"
+                priority
+              />
             </Link>
             <nav className="hidden md:flex items-center gap-8">
-              <Link href="/politica-de-privacidad" className="badge-text hover:text-primary transition-colors">Política de Privacidad</Link>
-              <Link href="/acuerdo-de-servicio-al-usuario" className="badge-text hover:text-primary transition-colors">Acuerdo de Servicio</Link>
+              <Link href="/politica-de-privacidad" className="badge-text hover:text-primary transition-colors">Privacidad</Link>
+              <Link href="/acuerdo-de-servicio-al-usuario" className="badge-text hover:text-primary transition-colors">Acuerdo</Link>
+              <Link href="/terminos-y-condiciones" className="badge-text hover:text-primary transition-colors">Términos</Link>
             </nav>
           </div>
         </header>
@@ -53,15 +50,13 @@ export default function RootLayout({
         <footer className="border-t border-white/5 py-12 bg-card/30">
           <div className="container mx-auto px-6 text-center">
             <div className="mb-6 flex justify-center">
-              {logo && (
-                <Image 
-                  src={logo.imageUrl} 
-                  alt="MONEYBIC Logo" 
-                  width={140} 
-                  height={40} 
-                  className="opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
-                />
-              )}
+              <Image 
+                src={logoUrl} 
+                alt="MONEYBIC Logo" 
+                width={140} 
+                height={40} 
+                className="opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
+              />
             </div>
             <p className="text-muted-foreground text-sm">
               &copy; 2026 MONEYBIC. Todos los derechos reservados.

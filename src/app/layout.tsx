@@ -6,7 +6,7 @@ import './globals.css';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
-  title: 'MONEYBIC',
+  title: 'MONEYBIC LEGAL',
   description: 'Finanzas inteligentes con MONEYBIC.',
 };
 

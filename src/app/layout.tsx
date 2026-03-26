@@ -61,6 +61,7 @@ export default function RootLayout({
               <Link href="/politica-de-privacidad" className="badge-text text-[10px] hover:text-primary transition-colors">Política de Privacidad</Link>
               <Link href="/acuerdo-de-servicio-al-usuario" className="badge-text text-[10px] hover:text-primary transition-colors">Acuerdo de Servicio</Link>
               <Link href="/terminos-y-condiciones" className="badge-text text-[10px] hover:text-primary transition-colors">Términos y Condiciones</Link>
+              <Link href="/politica-de-cancelaciones-y-reembolsos" className="badge-text text-[10px] hover:text-primary transition-colors">Cancelaciones y Reembolsos</Link>
             </nav>
 
             <p className="text-muted-foreground text-sm">

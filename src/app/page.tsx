@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -21,7 +22,7 @@ export default function HomePage() {
   return (
     <div className="animate-in fade-in duration-1000">
       {/* SECCIÓN HERO FULL WIDTH QUE CUBRE EL HEADER */}
-      <section className="relative w-full h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+      <section className="relative w-full min-h-screen flex flex-col items-center justify-center text-center overflow-hidden px-6 py-20">
         {/* Video Background */}
         <video
           autoPlay
@@ -39,16 +40,16 @@ export default function HomePage() {
         {/* Dark Overlay para legibilidad */}
         <div className="absolute inset-0 bg-black/60 z-10" />
 
-        {/* Contenido Hero con padding top para evitar overlap con el header */}
-        <div className="relative z-20 space-y-8 max-w-4xl px-6 pt-32 md:pt-40">
-          <div className="space-y-6">
+        {/* Contenido Hero */}
+        <div className="relative z-20 space-y-8 max-w-4xl mt-16 md:mt-24">
+          <div className="space-y-4 md:space-y-6">
             <Badge variant="outline" className="badge-text border-primary text-primary px-4 py-1 bg-primary/10 backdrop-blur-md">
               Préstamos en Minutos
             </Badge>
-            <h1 className="text-4xl md:text-8xl font-bold tracking-tight text-white leading-tight drop-shadow-2xl">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight drop-shadow-2xl">
               Dinero rápido cuando <br /><span className="text-primary">más lo necesitas</span>
             </h1>
-            <p className="text-lg md:text-2xl text-white/90 leading-relaxed font-medium max-w-3xl mx-auto drop-shadow-md">
+            <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed font-medium max-w-3xl mx-auto drop-shadow-md">
               MONEYBIC te conecta con préstamos personales desde $500 hasta $50,500 pesos mexicanos, 
               con aprobación en minutos y depósito directo a tu cuenta. Sin filas, sin papeleo, desde tu celular.
             </p>

@@ -29,8 +29,8 @@ export default function PrivacyPolicyPage() {
             </p>
             <p>Para cualquier consulta relacionada con esta Política de Privacidad, puede contactarnos a través de:</p>
             <ul className="list-none space-y-2">
-              <li><strong>Correo electrónico:</strong> <a href="mailto:contacto@moneybic.com" className="text-primary hover:underline">contacto@moneybic.com</a></li>
-              <li><strong>Teléfono:</strong> 098 999 9999</li>
+              <li><strong>Correo electrónico:</strong> <a href="mailto:miguelclaudia2711@gmail.com" className="text-primary hover:underline">miguelclaudia2711@gmail.com</a></li>
+              <li><strong>Teléfono:</strong> +524441757065</li>
               <li><strong>Horario de atención:</strong> Lunes a Domingo, 09:00 – 17:00 hrs (hora del Centro de México)</li>
             </ul>
           </CardContent>
@@ -144,7 +144,7 @@ export default function PrivacyPolicyPage() {
                 <li>Realizar análisis estadísticos internos sobre el comportamiento de la cartera de clientes</li>
               </ul>
               <p className="mt-2">
-                Si no desea que sus datos sean utilizados para las finalidades secundarias, puede manifestarlo enviando un correo a <a href="mailto:contacto@moneybic.com" className="text-primary hover:underline">contacto@moneybic.com</a> con el asunto "Oposición a finalidades secundarias".
+                Si no desea que sus datos sean utilizados para las finalidades secundarias, puede manifestarlo enviando un correo a <a href="mailto:miguelclaudia2711@gmail.com" className="text-primary hover:underline">miguelclaudia2711@gmail.com</a> con el asunto "Oposición a finalidades secundarias".
               </p>
             </div>
           </CardContent>
@@ -249,7 +249,7 @@ export default function PrivacyPolicyPage() {
             
             <div className="bg-muted/30 p-6 rounded-lg border border-white/5 space-y-4">
               <h4 className="font-bold text-foreground underline underline-offset-4">Cómo ejercer sus derechos ARCO</h4>
-              <p>Envíe su solicitud a <a href="mailto:contacto@moneybic.com" className="text-primary hover:underline">contacto@moneybic.com</a> indicando:</p>
+              <p>Envíe su solicitud a <a href="mailto:miguelclaudia2711@gmail.com" className="text-primary hover:underline">miguelclaudia2711@gmail.com</a> indicando:</p>
               <ul className="list-decimal pl-6 space-y-1">
                 <li>Nombre completo y número de teléfono registrado en la app</li>
                 <li>Derecho que desea ejercer (Acceso, Rectificación, Cancelación u Oposición)</li>

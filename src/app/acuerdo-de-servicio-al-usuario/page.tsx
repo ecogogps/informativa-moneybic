@@ -278,8 +278,8 @@ export default function ServiceAgreementPage() {
           <CardContent className="space-y-4">
             <p>Para cualquier duda, aclaración o reclamación relacionada con este Acuerdo:</p>
             <div className="bg-primary/10 p-6 rounded-lg border border-primary/20 space-y-2">
-              <p>Correo: <a href="mailto:contacto@moneybic.com" className="text-primary hover:underline">contacto@moneybic.com</a></p>
-              <p>Teléfono: 098 999 9999</p>
+              <p>Correo: <a href="mailto:miguelclaudia2711@gmail.com" className="text-primary hover:underline">miguelclaudia2711@gmail.com</a></p>
+              <p>Teléfono: +524441757065</p>
               <p>Horario: Lunes a Domingo, 09:00 – 17:00 hrs</p>
             </div>
           </CardContent>

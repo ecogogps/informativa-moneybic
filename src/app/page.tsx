@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -6,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Smartphone, Wallet, CreditCard, UserPlus, CheckCircle, Clock, ShieldCheck, Zap } from "lucide-react";
+import { Smartphone, Wallet, CreditCard, Clock, ShieldCheck, Zap } from "lucide-react";
 
 export default function HomePage() {
   const [mounted, setMounted] = useState(false);
@@ -21,24 +20,44 @@ export default function HomePage() {
 
   return (
     <div className="space-y-24 pb-20 animate-in fade-in duration-1000">
-      {/* SECCIÓN HERO */}
-      <section className="flex flex-col items-center text-center space-y-8 pt-12">
-        <div className="space-y-4 max-w-3xl">
-          <Badge variant="outline" className="badge-text border-primary text-primary px-4 py-1">
-            Préstamos en Minutos
-          </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-tight">
-            Dinero rápido cuando <span className="text-primary">más lo necesitas</span>
-          </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            MONEYBIC te conecta con préstamos personales desde $500 hasta $50,500 pesos mexicanos, 
-            con aprobación en minutos y depósito directo a tu cuenta. Sin filas, sin papeleo, desde tu celular.
-          </p>
+      {/* SECCIÓN HERO CON VIDEO DE FONDO */}
+      <section className="relative w-full min-h-[60vh] md:min-h-[70vh] flex flex-col items-center justify-center text-center px-6 overflow-hidden rounded-[2.5rem] mb-12 shadow-2xl">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source 
+            src="https://build.themovation.com/wp-content/uploads/2023/08/mixkit-long-hallway-in-data-center-23219-medium.mp4" 
+            type="video/mp4" 
+          />
+        </video>
+        
+        {/* Dark Overlay para legibilidad */}
+        <div className="absolute inset-0 bg-black/65 z-10" />
+
+        {/* Contenido Hero */}
+        <div className="relative z-20 space-y-8 max-w-3xl py-12">
+          <div className="space-y-4">
+            <Badge variant="outline" className="badge-text border-primary text-primary px-4 py-1 bg-primary/5 backdrop-blur-sm">
+              Préstamos en Minutos
+            </Badge>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-tight drop-shadow-sm">
+              Dinero rápido cuando <span className="text-primary">más lo necesitas</span>
+            </h1>
+            <p className="text-xl text-white/90 leading-relaxed font-medium max-w-2xl mx-auto drop-shadow-sm">
+              MONEYBIC te conecta con préstamos personales desde $500 hasta $50,500 pesos mexicanos, 
+              con aprobación en minutos y depósito directo a tu cuenta. Sin filas, sin papeleo, desde tu celular.
+            </p>
+          </div>
+          <Button className="pill-button bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 text-sm h-auto group mx-auto">
+            Solicita tu préstamo ahora
+            <Zap className="ml-2 h-4 w-4 fill-current" />
+          </Button>
         </div>
-        <Button className="pill-button bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-base h-auto group">
-          Solicita tu préstamo ahora
-          <Zap className="ml-2 h-4 w-4 fill-current" />
-        </Button>
       </section>
 
       {/* SECCIÓN — ¿QUÉ PUEDES HACER CON MONEYBIC? */}

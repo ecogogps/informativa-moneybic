@@ -39,21 +39,21 @@ export default function HomePage() {
         {/* Dark Overlay para legibilidad */}
         <div className="absolute inset-0 bg-black/60 z-10" />
 
-        {/* Contenido Hero */}
-        <div className="relative z-20 space-y-8 max-w-4xl px-6">
-          <div className="space-y-4">
+        {/* Contenido Hero con padding top para evitar overlap con el header */}
+        <div className="relative z-20 space-y-8 max-w-4xl px-6 pt-32 md:pt-40">
+          <div className="space-y-6">
             <Badge variant="outline" className="badge-text border-primary text-primary px-4 py-1 bg-primary/10 backdrop-blur-md">
               Préstamos en Minutos
             </Badge>
-            <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-white leading-tight drop-shadow-2xl">
+            <h1 className="text-4xl md:text-8xl font-bold tracking-tight text-white leading-tight drop-shadow-2xl">
               Dinero rápido cuando <br /><span className="text-primary">más lo necesitas</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-medium max-w-3xl mx-auto drop-shadow-md">
+            <p className="text-lg md:text-2xl text-white/90 leading-relaxed font-medium max-w-3xl mx-auto drop-shadow-md">
               MONEYBIC te conecta con préstamos personales desde $500 hasta $50,500 pesos mexicanos, 
               con aprobación en minutos y depósito directo a tu cuenta. Sin filas, sin papeleo, desde tu celular.
             </p>
           </div>
-          <Button className="pill-button bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-sm h-auto group mx-auto">
+          <Button className="pill-button bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 text-xs md:px-8 md:py-4 md:text-sm h-auto group mx-auto">
             Solicita tu préstamo ahora
             <Zap className="ml-2 h-4 w-4 fill-current" />
           </Button>

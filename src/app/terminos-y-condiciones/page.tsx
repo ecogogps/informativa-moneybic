@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function TermsAndConditionsPage() {
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700 pb-12">
+    <div className="container mx-auto px-6 pt-32 pb-12 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700 max-w-4xl">
       <div className="flex flex-col gap-4 text-center md:text-left">
         <div className="flex flex-wrap gap-2 justify-center md:justify-start">
           <Badge variant="outline" className="w-fit badge-text border-primary text-primary">
@@ -13,7 +13,7 @@ export default function TermsAndConditionsPage() {
             Versión 1.0
           </Badge>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white">Términos y Condiciones de Uso — MONEYBIC</h1>
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white">Términos y Condiciones — MONEYBIC</h1>
         <p className="text-muted-foreground">Última actualización: Marzo 2026</p>
       </div>
 
@@ -265,7 +265,7 @@ export default function TermsAndConditionsPage() {
             <p>Para dudas, aclaraciones o reportes relacionados con estos Términos:</p>
             <div className="bg-primary/10 p-6 rounded-lg border border-primary/20 space-y-2">
               <p>Correo: <a href="mailto:miguelclaudia2711@gmail.com" className="text-primary hover:underline">miguelclaudia2711@gmail.com</a></p>
-              <p>Teléfono: <a href="tel:+524441757065" className="text-primary hover:underline">+524441757065</a></p>
+              <p>Teléfono: +524441757065</p>
               <p>Horario: Lunes a Domingo, 09:00 – 17:00 hrs</p>
             </div>
           </CardContent>

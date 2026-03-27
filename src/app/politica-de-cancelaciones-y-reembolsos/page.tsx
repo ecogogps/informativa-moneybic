@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function CancellationPolicyPage() {
   return (
-    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700 pb-12">
+    <div className="container mx-auto px-6 pt-32 pb-12 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700 max-w-4xl">
       <div className="flex flex-col gap-4 text-center md:text-left">
         <div className="flex flex-wrap gap-2 justify-center md:justify-start">
           <Badge variant="outline" className="w-fit badge-text border-primary text-primary">

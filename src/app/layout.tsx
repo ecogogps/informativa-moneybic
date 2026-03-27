@@ -23,25 +23,25 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body min-h-screen flex flex-col bg-background text-foreground">
-        <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/80 backdrop-blur-md">
-          <div className="container mx-auto flex h-20 items-center justify-between px-6">
+        <header className="absolute top-0 left-0 z-50 w-full bg-transparent">
+          <div className="container mx-auto flex h-24 items-center justify-between px-6">
             <Link href="/" className="flex items-center gap-2">
               <Image 
                 src={logoUrl} 
                 alt="MONEYBIC Logo" 
-                width={130} 
-                height={36} 
+                width={140} 
+                height={40} 
                 className="object-contain"
                 priority
               />
             </Link>
-            <nav className="hidden md:flex items-center gap-8">
-              <Link href="/" className="badge-text hover:text-primary transition-colors">Inicio</Link>
+            <nav className="flex items-center gap-8">
+              <Link href="/" className="badge-text hover:text-primary transition-colors text-white drop-shadow-md">Inicio</Link>
             </nav>
           </div>
         </header>
 
-        <main className="flex-1 container mx-auto px-6 py-12 max-w-4xl">
+        <main className="flex-1">
           {children}
         </main>
 

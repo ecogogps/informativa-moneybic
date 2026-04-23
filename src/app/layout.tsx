@@ -6,6 +6,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'MONEYBIC',
   description: 'Finanzas inteligentes con MONEYBIC.',
+  verification: {
+    google: "uhb7hk4hBTHGUSlzbMsg0YU_3fAQ_CN-4fGvRgyG2nY",
+  },
 };
 
 export default function RootLayout({

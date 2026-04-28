@@ -19,8 +19,8 @@ import {
 export default function LandingPage() {
   const benefits = [
     { title: "Fácil de operar", description: "Gestión sencilla con INE/IFE y teléfono", icon: Smartphone },
-    { title: "Diversas opciones", description: "Plazos flexibles adaptados a ti", icon: Clock },
-    { title: "Montos altos", description: "Hasta $20,000 sin cargos ocultos", icon: Zap },
+    { title: "Diversas opciones", description: "Plazos semanales adaptados a ti", icon: Clock },
+    { title: "Montos altos", description: "Hasta $50,500 sin cargos ocultos", icon: Zap },
     { title: "Alta confianza", description: "+1 millón de usuarios activos", icon: Users },
     { title: "Líder en la industria", description: "Experiencia en servicios financieros", icon: Star },
     { title: "Servicio al cliente", description: "Atención profesional y dedicada", icon: ShieldCheck },
@@ -50,7 +50,7 @@ export default function LandingPage() {
               <span className="text-primary text-3xl md:text-5xl">Sin papeleos, dinero rápido</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              Préstamos hasta <span className="font-bold text-white">$20,000 MXN</span> con pagos flexibles y aprobación inmediata.
+              Préstamos desde $500 hasta <span className="font-bold text-white">$50,500 MXN</span> con aprobación inmediata.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -66,7 +66,7 @@ export default function LandingPage() {
         <div className="relative flex justify-center">
           <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full" />
           <Image 
-            src="https://picsum.photos/seed/moneybic/600/800" 
+            src="https://picsum.photos/seed/moneybic-app/600/800" 
             alt="App Preview" 
             width={400} 
             height={600} 
@@ -129,7 +129,7 @@ export default function LandingPage() {
             { 
               step: "3", 
               title: "Recibe tu dinero", 
-              desc: "Depósito directo en tu cuenta en minutos tras la aprobación." 
+              desc: "Depósito directo en tu cuenta vía SPEI tras la aprobación." 
             }
           ].map((item, index) => (
             <div key={index} className="relative group text-center space-y-6">
@@ -184,15 +184,15 @@ export default function LandingPage() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Somos la aplicación líder en préstamos personales confiables en México. 
               Nuestra tecnología nos permite ofrecer servicios financieros de forma 
-              segura, transparente y sumamente rápida.
+              segura, transparente y sumamente rápida directamente a tu cuenta bancaria.
             </p>
           </div>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "Tasas competitivas",
-              "Plazos flexibles",
-              "Múltiples préstamos activos",
-              "Fecha de pago personalizada"
+              "Plazos de 7 días",
+              "Aprobación en minutos",
+              "Pago vía SPEI"
             ].map((feature, i) => (
               <li key={i} className="flex items-center gap-3 font-medium">
                 <CheckCircle2 className="text-primary h-5 w-5" />
@@ -240,7 +240,7 @@ export default function LandingPage() {
               ¿Listo para obtener tu crédito?
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-              Descarga la app ahora y recibe tu aprobación en menos de 15 minutos.
+              Descarga la app ahora y recibe tu aprobación en menos de 15 a 30 minutos.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-6 pt-4">

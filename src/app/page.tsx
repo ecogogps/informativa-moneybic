@@ -53,9 +53,11 @@ export default function HomePage() {
               con aprobación en minutos y depósito directo a tu cuenta. Sin filas, sin papeleo, desde tu celular.
             </p>
           </div>
-          <Button className="pill-button bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 text-xs md:px-8 md:py-4 md:text-sm h-auto group mx-auto">
-            Solicita tu préstamo ahora
-            <Zap className="ml-2 h-4 w-4 fill-current" />
+          <Button asChild className="pill-button bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 text-xs md:px-8 md:py-4 md:text-sm h-auto group mx-auto">
+            <a href="https://drive.google.com/drive/folders/1BBfKHajYvCM9bDhsBSJ5dBWE7LtvZVDu?usp=sharing" target="_blank" rel="noopener noreferrer">
+              Descargar App
+              <Zap className="ml-2 h-4 w-4 fill-current" />
+            </a>
           </Button>
         </div>
       </section>

@@ -29,8 +29,8 @@ export default function PrivacyPolicyPage() {
             </p>
             <p>Contacto del responsable:</p>
             <ul className="list-none space-y-2">
-              <li><strong>Correo:</strong> <a href="mailto:miguelclaudia2711@gmail.com" className="text-primary hover:underline">miguelclaudia2711@gmail.com</a></li>
-              <li><strong>Teléfono:</strong> +524441757065</li>
+              <li><strong>Correo:</strong> <a href="mailto:soporte.moneybic@gmail.com" className="text-primary hover:underline">soporte.moneybic@gmail.com</a></li>
+              <li><strong>Teléfono:</strong> +524441756903</li>
               <li><strong>Horario:</strong> Lunes a Domingo, 09:00 – 17:00 hrs</li>
             </ul>
           </CardContent>
@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
                 <li>Realizar análisis estadísticos internos sobre el comportamiento de la cartera</li>
               </ul>
               <p className="mt-2 italic">
-                Para oponerse a las finalidades secundarias, envíe un correo a miguelclaudia2711@gmail.com con el asunto: "Oposición a finalidades secundarias".
+                Para oponerse a las finalidades secundarias, envíe un correo a soporte.moneybic@gmail.com con el asunto: "Oposición a finalidades secundarias".
               </p>
             </div>
           </CardContent>
@@ -203,7 +203,7 @@ export default function PrivacyPolicyPage() {
             
             <div className="bg-muted/30 p-6 rounded-lg border border-white/5 space-y-4">
               <h4 className="font-bold text-foreground underline underline-offset-4">Cómo ejercer sus derechos ARCO</h4>
-              <p>Envíe su solicitud a <a href="mailto:miguelclaudia2711@gmail.com" className="text-primary hover:underline">miguelclaudia2711@gmail.com</a> indicando:</p>
+              <p>Envíe su solicitud a <a href="mailto:soporte.moneybic@gmail.com" className="text-primary hover:underline">soporte.moneybic@gmail.com</a> indicando:</p>
               <ul className="list-decimal pl-6 space-y-1">
                 <li>Nombre completo y número de teléfono registrado en la App</li>
                 <li>Derecho que desea ejercer</li>

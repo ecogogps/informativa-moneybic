@@ -27,8 +27,8 @@ export default function CancellationPolicyPage() {
               <h4 className="font-bold text-foreground">1.1 Antes del desembolso</h4>
               <p>Si su solicitud de préstamo ha sido aprobada pero el dinero aún no ha sido transferido a su cuenta bancaria, puede solicitar la cancelación contactando al equipo de atención al cliente dentro del horario de servicio:</p>
               <ul className="list-none pl-4 space-y-1">
-                <li><strong>Correo:</strong> miguelclaudia2711@gmail.com</li>
-                <li><strong>Teléfono / WhatsApp:</strong> +524441757065</li>
+                <li><strong>Correo:</strong> soporte.moneybic@gmail.com</li>
+                <li><strong>Teléfono / WhatsApp:</strong> +524441756903</li>
                 <li><strong>Horario:</strong> Lunes a Domingo, 09:00 – 17:00 hrs (hora del Centro de México)</li>
               </ul>
               <p>En este supuesto no se generará ningún cargo ni interés a su cargo.</p>
@@ -104,8 +104,8 @@ export default function CancellationPolicyPage() {
           <CardContent className="space-y-4">
             <p>Para cualquier gestión relacionada con esta política, contáctenos a través de los siguientes canales:</p>
             <div className="bg-primary/10 p-4 rounded-lg border border-primary/20 space-y-1">
-              <p><strong>Correo electrónico:</strong> miguelclaudia2711@gmail.com</p>
-              <p><strong>Teléfono / WhatsApp:</strong> +524441757065</p>
+              <p><strong>Correo electrónico:</strong> soporte.moneybic@gmail.com</p>
+              <p><strong>Teléfono / WhatsApp:</strong> +524441756903</p>
               <p><strong>Horario de atención:</strong> Lunes a Domingo, 09:00 – 17:00 hrs (hora del Centro de México)</p>
             </div>
             <p>Al contactarnos, proporcione:</p>

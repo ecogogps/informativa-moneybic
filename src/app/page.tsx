@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -179,8 +178,8 @@ export default function HomePage() {
                 </div>
                 <div className="flex flex-col text-center md:text-left">
                   <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Correo electrónico</span>
-                  <a href="mailto:miguelclaudia2711@gmail.com" className="text-lg font-semibold hover:text-primary transition-colors">
-                    miguelclaudia2711@gmail.com
+                  <a href="mailto:soporte.moneybic@gmail.com" className="text-lg font-semibold hover:text-primary transition-colors">
+                    soporte.moneybic@gmail.com
                   </a>
                 </div>
               </div>
@@ -190,8 +189,8 @@ export default function HomePage() {
                 </div>
                 <div className="flex flex-col text-center md:text-left">
                   <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Teléfono</span>
-                  <a href="tel:+524441757065" className="text-lg font-semibold hover:text-primary transition-colors">
-                    +524441757065
+                  <a href="tel:+524441756903" className="text-lg font-semibold hover:text-primary transition-colors">
+                    +524441756903
                   </a>
                 </div>
               </div>

@@ -23,8 +23,12 @@ export function middleware(request: NextRequest) {
   // Países permitidos
   const allowedCountries = ['MX', 'EC'];
 
+  // En desarrollo se omite el bloqueo para permitir pruebas y vista previa sin fallos por proxies de red
+  if (process.env.NODE_ENV !== 'production') {
+    return NextResponse.next();
+  }
+
   // Solo bloqueamos si el encabezado está presente y el país NO es permitido.
-  // Esto evita bloqueos accidentales en desarrollo local donde el header no existe.
   if (country && !allowedCountries.includes(country)) {
     return NextResponse.redirect(new URL('/no-disponible', request.url));
   }

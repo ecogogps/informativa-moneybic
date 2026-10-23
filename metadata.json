@@ -1,0 +1,7 @@
+{
+  "name": "MONEYBIC - Préstamos Personales",
+  "description": "Plataforma informativa de préstamos personales MONEYBIC con cotizaciones, requisitos y asesoría financiera.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

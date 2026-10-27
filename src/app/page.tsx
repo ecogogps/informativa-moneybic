@@ -10,6 +10,7 @@ import {
   Wallet,
   CreditCard,
   Clock,
+  Shield,
   ShieldCheck,
   Zap,
   Mail,
@@ -54,70 +55,100 @@ export default function HomePage() {
 
   return (
     <div className="animate-in fade-in duration-700">
-      {/* HERO SECTION — Estilo tarjeta con imagen desfasada (Baubap style) */}
-      <section className="relative w-full pt-6 pb-16 md:pt-12 md:pb-24 overflow-hidden">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 relative z-10">
-          <div className="relative">
-            {/* Contenedor base claro */}
-            <div className="w-full bg-[#EEF2F6] rounded-[2.5rem] p-8 sm:p-12 lg:p-16 relative shadow-xl overflow-visible">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                {/* Lado izquierdo: Título, Descripción, Botón de descarga */}
-                <div className="lg:col-span-7 space-y-6 text-left z-10">
-                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.08]">
-                    Dinero rápido cuando <br />
-                    <span className="text-primary">más lo necesitas</span>
-                  </h1>
-
-                  <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-lg">
-                    MONEYBIC te conecta con préstamos personales desde $500 hasta $50,500 pesos mexicanos, con aprobación en minutos y depósito directo a tu cuenta. Sin filas, sin papeleo, desde tu celular.
-                  </p>
-
-                  <div className="pt-2 flex flex-wrap items-center gap-4">
-                    <a
-                      href="https://drive.google.com/drive/folders/1BBfKHajYvCM9bDhsBSJ5dBWE7LtvZVDu?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3.5 bg-slate-950 hover:bg-slate-800 text-white px-7 py-3.5 rounded-2xl transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] group"
-                    >
-                      <div className="p-1.5 rounded-xl bg-white/10 group-hover:bg-primary/20 transition-colors">
-                        <Download className="h-5 w-5 text-primary" />
-                      </div>
-                      <div className="text-left">
-                        <span className="block text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                          Disponible para Android
-                        </span>
-                        <span className="block text-sm font-extrabold text-white">
-                          Descargar App
-                        </span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                {/* Espacio reservado para la columna derecha en desktop */}
-                <div className="hidden lg:block lg:col-span-5" />
+      {/* HERO SECTION — Dividido en 2 contenedores con fondo #080808 */}
+      <section className="relative w-full bg-[#080808] py-8 sm:py-12 lg:py-16 overflow-hidden">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 xl:gap-14 items-center">
+            {/* Contenedor 1 (Izquierdo): Fondo E4F0D8, esquinas redondeadas, puntitos, burbuja, título, descripción, botón y badges */}
+            <div className="relative bg-[#E4F0D8] rounded-[2.5rem] sm:rounded-[3rem] p-7 sm:p-10 lg:p-12 overflow-hidden shadow-2xl flex flex-col justify-between min-h-[500px]">
+              {/* Efecto de varios puntitos color verde de la marca en la esquina superior izquierda */}
+              <div className="absolute top-3.5 left-3.5 sm:top-6 sm:left-6 grid grid-cols-5 gap-1 sm:gap-1.5 pointer-events-none z-0">
+                {Array.from({ length: 35 }).map((_, i) => (
+                  <span
+                    key={i}
+                    className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#0d7d36]/60 sm:bg-[#0d7d36]/70 ${
+                      i >= 20 ? "hidden sm:inline-block" : "inline-block"
+                    }`}
+                  />
+                ))}
               </div>
 
-              {/* Contenedor de la imagen desfasada (sobresale por abajo en desktop) */}
-              <div className="mt-8 lg:mt-0 relative h-[320px] sm:h-[380px] lg:h-auto lg:absolute lg:top-8 lg:bottom-[-48px] lg:right-8 lg:w-[44%] rounded-[2.5rem] overflow-hidden shadow-2xl z-20">
+              {/* Cuadritos color verde de la marca trasparentes en la esquina inferior derecha */}
+              <div className="absolute -bottom-2 -right-2 w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-[#0d7d36]/20 pointer-events-none z-0" />
+              <div className="absolute bottom-6 right-8 sm:bottom-8 sm:right-10 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-[#0d7d36]/15 pointer-events-none z-0" />
+
+              {/* Cabecera interior: Burbuja '100% en línea' cercana a la esquina superior derecha */}
+              <div className="relative z-10 flex justify-end">
+                <div className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-[#c5e4ad]/75 text-[#0d7d36] text-xs sm:text-sm font-bold shadow-xs">
+                  <Check className="h-4 w-4 stroke-[3]" />
+                  <span>100% en línea</span>
+                </div>
+              </div>
+
+              {/* Contenido principal: Título, Descripción y Botón */}
+              <div className="relative z-10 space-y-5 sm:space-y-6 pt-3 sm:pt-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.15rem] xl:text-[3.5rem] font-black text-black tracking-tight leading-[1.05]">
+                  Préstamos al<br />
+                  instante,<br />
+                  <span className="text-[#0d7d36]">sin buró</span>
+                </h1>
+
+                <p className="text-base sm:text-lg md:text-xl font-bold text-slate-800 leading-snug max-w-md">
+                  De $500 a $50,500 MXN directo a tu cuenta
+                </p>
+
+                <div className="pt-2">
+                  <a
+                    href="https://testmoneybic.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-3 bg-[#0d7d36] hover:bg-[#0b6a2e] text-white px-8 sm:px-10 py-4 sm:py-4.5 rounded-full text-base sm:text-lg font-black tracking-wider uppercase shadow-xl shadow-[#0d7d36]/30 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                  >
+                    <span>Solicitar Préstamo</span>
+                    <Download className="h-5 w-5 stroke-[2.5]" />
+                  </a>
+                </div>
+              </div>
+
+              {/* 3 Contenedores blancos abajo del botón */}
+              <div className="relative z-10 pt-6 sm:pt-8 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 w-full max-w-lg">
+                {/* 1. Regulado por CONDUSEF */}
+                <div className="bg-white rounded-2xl px-3 py-2.5 sm:py-3 flex items-center justify-center sm:justify-start gap-2 shadow-xs border border-black/5 h-full min-h-[54px]">
+                  <Shield className="h-4 w-4 text-[#0d7d36] shrink-0" />
+                  <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                    Regulado por <span className="font-extrabold text-black">CONDUSEF</span>
+                  </span>
+                </div>
+
+                {/* 2. Sin aval */}
+                <div className="bg-white rounded-2xl px-3 py-2.5 sm:py-3 flex items-center justify-center sm:justify-start gap-2 shadow-xs border border-black/5 h-full min-h-[54px]">
+                  <CheckCircle2 className="h-4 w-4 text-[#0d7d36] shrink-0" />
+                  <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                    Sin aval
+                  </span>
+                </div>
+
+                {/* 3. Aprobación en minutos */}
+                <div className="bg-white rounded-2xl px-3 py-2.5 sm:py-3 flex items-center justify-center sm:justify-start gap-2 shadow-xs border border-black/5 h-full min-h-[54px]">
+                  <Clock className="h-4 w-4 text-[#0d7d36] shrink-0" />
+                  <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
+                    Aprobación en minutos
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Contenedor 2 (Derecho): Imagen bannerprincipal.png */}
+            <div className="relative w-full flex items-center justify-center">
+              <div className="relative w-full max-w-[560px] aspect-square rounded-[2.5rem] overflow-hidden">
                 <Image
-                  src="/assets/phone_mockup2.png"
-                  alt="App MONEYBIC en pantalla de celular"
+                  src="/assets/bannerprincipal.png"
+                  alt="Préstamos al instante MONEYBIC"
                   fill
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                   priority
                   referrerPolicy="no-referrer"
                 />
-
-                {/* Burbuja: 'Tu préstamo fue aprobado' */}
-                <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 bg-white/95 backdrop-blur-md px-4 sm:px-5 py-2.5 sm:py-3 rounded-full shadow-2xl flex items-center gap-2.5 border border-slate-100 z-30">
-                  <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-white shrink-0 shadow-sm shadow-primary/40">
-                    <Check className="h-3 w-3 stroke-[3]" />
-                  </div>
-                  <span className="text-xs sm:text-sm font-bold text-slate-900 tracking-tight">
-                    Tu préstamo fue aprobado
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -331,33 +362,33 @@ export default function HomePage() {
           <div className="glass-card max-w-4xl mx-auto p-6 sm:p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {/* Email */}
-              <div className="rounded-2xl bg-secondary/40 border border-white/5 p-6 flex flex-col justify-between space-y-4 hover:border-primary/30 transition-colors">
-                <div className="flex items-center gap-4 min-w-0">
-                  <div className="p-3.5 rounded-xl bg-primary/15 text-primary border border-primary/20 shrink-0">
-                    <Mail className="h-6 w-6" />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground block">
-                      Correo electrónico
-                    </span>
-                    <a
-                      href="mailto:soporte.moneybic@gmail.com"
-                      className="text-sm sm:text-base lg:text-lg font-bold text-white hover:text-primary transition-colors whitespace-nowrap block"
-                      title="soporte.moneybic@gmail.com"
-                    >
-                      soporte.moneybic@gmail.com
-                    </a>
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => handleCopy("soporte.moneybic@gmail.com", "email")}
-                  className="w-full py-2 px-4 rounded-xl border border-white/10 hover:border-primary/40 bg-card/60 text-xs font-semibold text-muted-foreground hover:text-white flex items-center justify-center gap-2 transition-all"
-                >
-                  <Copy className="h-3.5 w-3.5" />
-                  <span>{copiedEmail ? "Copiado al portapapeles" : "Copiar correo"}</span>
-                </button>
+          <div className="rounded-2xl bg-secondary/40 border border-white/5 p-6 flex flex-col justify-between space-y-4 hover:border-primary/30 transition-colors">
+            <div className="flex items-center gap-4 min-w-0">
+              <div className="p-3.5 rounded-xl bg-primary/15 text-primary border border-primary/20 shrink-0">
+                <Mail className="h-6 w-6" />
               </div>
+              <div className="min-w-0 flex-1">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground block">
+                  Correo electrónico
+                </span>
+                <a
+                  href="mailto:soporte.moneybic@gmail.com"
+                  className="text-sm sm:text-base lg:text-lg font-bold text-white hover:text-primary transition-colors block leading-tight sm:whitespace-nowrap"
+                  title="soporte.moneybic@gmail.com"
+                >
+                  soporte.moneybic<br className="sm:hidden" />@gmail.com
+                </a>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => handleCopy("soporte.moneybic@gmail.com", "email")}
+              className="w-full py-2 px-4 rounded-xl border border-white/10 hover:border-primary/40 bg-card/60 text-xs font-semibold text-muted-foreground hover:text-white flex items-center justify-center gap-2 transition-all"
+            >
+              <Copy className="h-3.5 w-3.5" />
+              <span>{copiedEmail ? "Copiado al portapapeles" : "Copiar correo"}</span>
+            </button>
+          </div>
 
               {/* Teléfono */}
               <div className="rounded-2xl bg-secondary/40 border border-white/5 p-6 flex flex-col justify-between space-y-4 hover:border-primary/30 transition-colors">
@@ -392,69 +423,98 @@ export default function HomePage() {
 
         {/* SECCIÓN — SOBRE MONEYBIC / CONFIANZA */}
         <section className="scroll-mt-28">
-          <div className="w-full bg-white rounded-[2.5rem] p-8 sm:p-12 lg:p-16 relative shadow-xl overflow-visible">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-              {/* Lado izquierdo: Título, Descripción, Botón de descarga como en el hero */}
-              <div className="lg:col-span-7 space-y-6 text-left z-10">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
-                  Una app en la que <br className="hidden sm:inline" />
-                  <span className="text-primary">puedes confiar</span>
+          <div className="w-full bg-[#080808] rounded-[2.5rem] sm:rounded-[3rem] p-7 sm:p-10 lg:p-14 relative shadow-2xl overflow-hidden border border-white/10 eth-grid-bg">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 xl:gap-14 items-center">
+              {/* Contenedor 1 (Izquierdo): Logo, Títulos, Descripción, Beneficios y Botón */}
+              <div className="space-y-6 sm:space-y-7 z-10 text-left">
+                {/* Logo MONEYBIC */}
+                <div className="flex items-center">
+                  <Image
+                    src="/assets/moneybichorizontal.png"
+                    alt="Logo MONEYBIC"
+                    width={200}
+                    height={60}
+                    className="h-[60px] w-[200px] object-contain"
+                    priority
+                  />
+                </div>
+
+                {/* Título 1 */}
+                <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl font-black text-white tracking-tight leading-[1.1]">
+                  Una app en la que <br />
+                  <span className="text-[#52c16c]">puedes confiar</span>
                 </h2>
 
-                <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-xl">
+                {/* Descripción */}
+                <p className="text-sm sm:text-base text-white/90 font-normal leading-relaxed max-w-lg">
                   MONEYBIC no solo es práctica y simple, también es accesible y responsable. Solicitudes 100% digitales, respuestas inmediatas y total transparencia en cada paso.
                 </p>
 
-                <div className="pt-2 flex flex-wrap items-center gap-4">
+                {/* Título 2 */}
+                <h3 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-extrabold text-white tracking-tight leading-tight pt-2">
+                  Solicita hoy y{" "}
+                  <span className="text-[#52c16c]">obtén beneficios exclusivos</span>
+                </h3>
+
+                {/* Lista de 3 beneficios con icono circular verde y visto blanco */}
+                <div className="space-y-3.5 pt-1">
+                  <div className="flex items-center gap-3">
+                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#34c759] flex items-center justify-center text-white shrink-0 shadow-sm">
+                      <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[3]" />
+                    </div>
+                    <span className="text-white text-base sm:text-lg font-bold">
+                      Aprobación inmediata
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#34c759] flex items-center justify-center text-white shrink-0 shadow-sm">
+                      <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[3]" />
+                    </div>
+                    <span className="text-white text-base sm:text-lg font-bold">
+                      Sin comisiones ocultas
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#34c759] flex items-center justify-center text-white shrink-0 shadow-sm">
+                      <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[3]" />
+                    </div>
+                    <span className="text-white text-base sm:text-lg font-bold">
+                      100% digital
+                    </span>
+                  </div>
+                </div>
+
+                {/* Botón color E5F4DF */}
+                <div className="pt-3">
                   <a
-                    href="https://drive.google.com/drive/folders/1BBfKHajYvCM9bDhsBSJ5dBWE7LtvZVDu?usp=sharing"
+                    href="https://testmoneybic.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3.5 bg-slate-950 hover:bg-slate-800 text-white px-7 py-3.5 rounded-2xl transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] group"
+                    className="inline-flex items-center justify-center gap-3 bg-[#E5F4DF] hover:bg-[#d8eed1] text-[#0d7d36] px-6 sm:px-9 py-3 sm:py-4 rounded-full text-base sm:text-lg font-extrabold tracking-wide shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all text-center"
                   >
-                    <div className="p-1.5 rounded-xl bg-white/10 group-hover:bg-primary/20 transition-colors">
-                      <Download className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="text-left">
-                      <span className="block text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                        Disponible para Android
-                      </span>
-                      <span className="block text-sm font-extrabold text-white">
-                        Descargar App
-                      </span>
-                    </div>
+                    <span className="leading-tight">
+                      Solicita hoy y
+                      <br className="sm:hidden" />
+                      {' '}obtén beneficios
+                    </span>
+                    <ArrowRight className="h-5 w-5 stroke-[2.5] shrink-0" />
                   </a>
                 </div>
               </div>
 
-              {/* Lado derecho: Imagen redondeada de una persona feliz y contenedor con logo */}
-              <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                <div className="relative w-full max-w-[380px] sm:max-w-[420px]">
-
-                  {/* Imagen redondeada de la persona feliz */}
-                  <div className="relative w-full aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl z-10 bg-slate-100">
-                    <Image
-                      src="/assets/happy_person.jpg"
-                      alt="Persona feliz con MONEYBIC"
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 768px) 100vw, 420px"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-
-                  {/* Contenedor un poco más arriba de la esquina inferior izquierda con el logo de MONEYBIC */}
-                  <div className="absolute -left-3 sm:-left-6 bottom-8 sm:bottom-12 z-20 bg-slate-950/95 backdrop-blur-md w-16 h-16 sm:w-20 sm:h-20 aspect-square p-2.5 sm:p-3 rounded-xl shadow-2xl border border-slate-800 flex items-center justify-center">
-                    <Image
-                      src="https://i.postimg.cc/Jzd6XVzQ/MONEYBIC-LOGO.png"
-                      alt="Logo MONEYBIC"
-                      width={80}
-                      height={80}
-                      className="object-contain w-full h-full"
-                      priority
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
+              {/* Contenedor 2 (Derecho): Imagen bannernewseccion.png */}
+              <div className="relative w-full flex items-center justify-center lg:justify-end">
+                <div className="relative w-full max-w-[480px] sm:max-w-[540px] aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
+                  <Image
+                    src="/assets/bannernewseccion.png"
+                    alt="Una app en la que puedes confiar - MONEYBIC"
+                    fill
+                    className="object-contain object-center"
+                    priority
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
               </div>
             </div>

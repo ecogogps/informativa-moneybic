@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className="font-body min-h-screen flex flex-col bg-background text-foreground antialiased">
         <Header />
 
-        <main className="flex-1 eth-grid-bg relative pt-24 sm:pt-28">
+        <main className="flex-1 eth-grid-bg relative pt-28 sm:pt-32">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-96 eth-radial-glow pointer-events-none" />
           {children}
         </main>
